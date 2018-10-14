@@ -1,5 +1,3 @@
-def my_ticket(tickets, winning_tickets)
-    array_of_my_tickets = []
-    array_of_my_tickets << tickets
-    
+def pick_a_winner(tickets, winning_tickets)
 end
+
