@@ -9,7 +9,11 @@ def test_for_array
     assert_equal(Array, pick_a_winner(["2123"],["2222"]).class)
 end
 def test_for_match
+    # 1 match
     assert_equal(["1234"], pick_a_winner(["1234", "4423", "4412", "5555"], ["1234", "4444", "1235"]))
+    # 2 match
     assert_equal(["1234", "4423"], pick_a_winner(["1234", "4423", "4412", "5555"], ["1234", "4423", "1235"]))
+    # 4 match
+    assert_equal(["1234", "4423", "1092", "0023"], pick_a_winner(["1234", "4423", "1092", "0023"], ["1234", "4423", "1235","1092", "0023"]))
 end
 end
