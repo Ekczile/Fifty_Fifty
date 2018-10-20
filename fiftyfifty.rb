@@ -8,15 +8,17 @@ def pick_a_winner(tickets, winning_tickets)
     array
 end
 
-def how_many_correct(tickets, winning_tickets)
+def how_many_off(tickets, winning_tickets)
     counter = 0
     x = 0
-    tickets[x].length.times do
-        if tickets[x] == winning_tickets[x]
-            counter += 1
+    array1 = []
+    tickets.each do |v|
+        if tickets[x] != winning_tickets[x]
+            counter += 1  
         end
+        p "#{v} off by #{counter}"
+        array1 << counter.to_s
         x += 1
     end
-    return "#{counter}"
+    return array1
 end
-

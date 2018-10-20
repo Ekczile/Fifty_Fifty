@@ -19,6 +19,7 @@ def test_for_match
     assert_equal(["1234", "4321"], pick_a_winner(["1234","4321","5543","0075","9084","8934","9864","5432","1235","9999"],["1234","4321"]))
 end
 def test_how_many_off
-    assert_equal("3", how_many_correct(["1236"], ["1235"]))
+    assert_equal(["1"], how_many_off(["1236"], ["1235"]))
+    assert_equal(["1", "2",], how_many_off(["1234", "5554"],["1235","5545"]))
 end
 end
