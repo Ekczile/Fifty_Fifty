@@ -15,12 +15,16 @@ def how_many_off(tickets, winning_tickets)
     array1 = []
     tickets.each do |v|
         n += 1
-        if tickets[x] != winning_tickets[x]
-            counter += 1  
-            
-        end
+        counter = 0
+        ticketsplit = tickets[x].split("")
+        winningsplit = winning_tickets[x].split("")
+        ticketsplit.each_with_index do |curret_ticket_number, i|
+            if curret_ticket_number != winningsplit[i]
+                counter += 1
+            end
+         end
         p "Ticket#{[n]}, #{v} is off by #{counter}."
-        array1 << counter.to_s
+            array1 << counter.to_s
         x += 1
     end
     return array1 
